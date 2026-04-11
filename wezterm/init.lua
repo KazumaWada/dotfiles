@@ -69,7 +69,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
         }
 end)
 
-----------------------------------------------------
+---------------------------------------------------
 -- Leader / Keybinds は後々追加予定
 ----------------------------------------------------
 -- config.disable_default_key_bindings = true
