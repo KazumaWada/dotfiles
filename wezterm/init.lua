@@ -35,16 +35,6 @@ config.window_frame = {
         active_titlebar_bg = "none",
 }
 
--- タブバー背景色
--- 鉛のような金属光沢を出すため、放射状グラデーション + ノイズで質感を付与
-config.window_background_gradient = {
-        orientation = { Linear = { angle = 70 } },
-        colors = { "#040807", "#2c3530", "#060b09", "#3d453f", "#0a0f0d", "#1c2320" },
-        interpolation = "Basis",
-        blend = "Oklab",
-        noise = 56,
-}
-
 -- タブの追加ボタンを非表示
 config.show_new_tab_button_in_tab_bar = false
 
@@ -73,13 +63,14 @@ local SOLID_LEFT_ARROW = ""
 local SOLID_RIGHT_ARROW = ""
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-        local background = "#5c6d74"
-        local foreground = "#FFFFFF"
+        -- TokyoNight Storm のタブライン色（Ghostty と統一）
+        local background = "#292e42"
+        local foreground = "#c0caf5"
         local edge_background = "none"
 
         if tab.is_active then
-                background = "#5c6960"
-                foreground = "#FFFFFF"
+                background = "#24283b"
+                foreground = "#c0caf5"
         end
 
         local edge_foreground = background
